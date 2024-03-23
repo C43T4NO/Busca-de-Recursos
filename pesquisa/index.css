@@ -1,0 +1,142 @@
+/* Define a fonte padrão para o corpo do documento */
+body {
+    font-family: Arial, sans-serif; /* Aplica a fonte Arial como a fonte padrão */
+    margin: 0; /* Remove as margens padrão do corpo */
+    padding: 0; /* Remove os preenchimentos padrão do corpo */
+    /* Fundo degradê */
+    background: linear-gradient(to bottom right, #050505, #000066, #4b0082, #800080); /* Fundo degradê mais escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000; /* Define a cor do texto como preto */
+}
+
+/* Estiliza o contêiner principal da página */
+.container {
+    max-width: 1200px; /* Define a largura máxima do contêiner para 900 pixels */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 0px; /* Adiciona preenchimento interno ao contêiner */
+}
+
+/* Estiliza os cabeçalhos h1 e h2 */
+h1 {
+    color: #ffffff; /* Define a cor do texto do cabeçalho como preto */
+}
+
+/* Estiliza os cabeçalhos das boxes */
+.box-title {
+    color: #000000; /* Define a cor do texto do título da box como preto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estiliza as colunas de layout */
+.column {
+    display: inline-block; /* Permite que as colunas fiquem uma ao lado da outra */
+    vertical-align: top; /* Alinha as colunas ao topo */
+    margin-right: 25px; /* Adiciona margem direita entre as colunas */
+    width: 356px; /* Defina a largura padrão para as boxes */
+    height: 300; /* Defina a altura padrão para as boxes */
+    border: 4px solid #ffffff; /* Adiciona borda */
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+    padding: 10px; /* Adiciona preenchimento interno */
+    background-color: rgb(255, 248, 248); /* Define o fundo das caixas de checklist como preto */
+}
+
+/* Define a aparência das listas de checkboxes */
+.checkbox-list {
+    margin-bottom: 25px; /* Adiciona margem inferior às listas */
+    max-height: 500px; /* Limita a altura da lista */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura */
+}
+
+/* Estiliza os checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Remove a aparência padrão do navegador */
+    -moz-appearance: none;
+    appearance: none;
+    /* Define o tamanho do checkbox */
+    width: 20px;
+    height: 20px;
+    /* Adiciona borda e raio de borda */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    /* Adiciona margem à direita para separar o checkbox do texto */
+    margin-right: 5px;
+    /* Habilita o cursor para interatividade */
+    cursor: pointer;
+}
+
+/* Estiliza o marcador do checkbox quando marcado */
+input[type="checkbox"]:checked {
+    background-color: #4CAF50; /* Define a cor de fundo quando marcado */
+}
+
+/* Estiliza os checkboxes */
+.checkbox-list input[type="checkbox"] {
+    vertical-align: middle; /* Alinha verticalmente os checkboxes */
+}
+
+/* Estiliza o texto do checkbox */
+.checkbox-list label {
+    display: inline-block; /* Faz com que os labels se comportem como blocos */
+    vertical-align: middle; /* Alinha verticalmente os labels */
+}
+
+/* Adiciona espaço abaixo das colunas das tabelas */
+.column {
+    margin-bottom: 40px; /* Adiciona um espaço extra abaixo das colunas */
+}
+
+/* Estiliza o botão de redirecionamento */
+#redirectButton {
+    padding: 10px 22px; /* Adiciona preenchimento interno ao botão */
+    background-color: #3289e6; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    position: absolute; /* Define o posicionamento absoluto */
+    bottom: 20px; /* Define a distância do botão em relação ao fundo da página */
+    left: 50%; /* Define a posição horizontal do botão */
+    transform: translateX(-50%); /* Move o botão para a esquerda em 50% do seu próprio tamanho */
+}
+
+/* Estilo de hover para o botão de redirecionamento */
+#redirectButton:hover {
+    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilos adicionais para o campo de busca */
+.search-container {
+    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dos elementos filhos */
+    margin-bottom: 20px; /* Adiciona margem inferior ao contêiner de busca */
+}
+
+/* Estilos para o campo de busca */
+.search-input {
+    padding: 8px; /* Adiciona preenchimento interno ao campo de entrada */
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor do campo de entrada */
+    border-radius: 6px; /* Adiciona bordas arredondadas ao campo de entrada */
+    width: 560px; /* Reduz a largura do campo de busca */
+}
+
+/* Estilos para o botão de busca */
+.search-button {
+    padding: 10px 22px; /* Adiciona preenchimento interno ao botão */
+    background-color: #3289e6; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+}
+
+/* Estilos de hover para o botão de busca */
+.search-button:hover {
+    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para o texto selecionado em negrito */
+.selected {
+    font-weight: bold; /* Define o texto selecionado em negrito */
+}

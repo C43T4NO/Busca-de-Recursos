@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Empresas e Recursos</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca por Empresa ou Recurso</h1>
+        
+        <!-- Campo de busca -->
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Insira o nome do recurso e/ou da empresa aqui">
+            <button class="search-button" onclick="pesquisar()">Pesquisar Recurso/Empresa</button>
+        </div>
+        
+        <div class="column">
+            <h2>Empresas</h2>
+            <div id="empresas" class="checkbox-list"></div>
+        </div>
+        <div class="column">
+            <h2>Recursos</h2>
+            <div id="recursos" class="checkbox-list"></div>
+        </div>
+        <button id="redirectButton">Resultados da Busca</button> <!-- Botão para redirecionar -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

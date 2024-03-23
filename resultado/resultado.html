@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos dos Catálogos - Ideia 2001</title>
+  <link rel="stylesheet" href="resultado.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <img id="logoideia" src="logo.png" alt="Logo da Empresa">
+    <h1>Resultados da Pesquisa de Recursos</h1>
+    <div class="borda"></div>
+  </header>
+
+  <section class="corpo">
+    <div class="titulo">
+      <p>Selecione uma Empresa ou um Recurso</p>
+    </div>
+    <div class="busca">
+      <label for="empresa">Empresa:</label>
+      <select id="empresa" name="empresa">
+        <option value="Todas">Exibir todas as empresas</option>
+      </select>
+
+      <label for="recurso" >Recurso:</label>
+      <select id="recurso" name="recurso">
+        <option value="Todos">Exibir todos os recursos</option>
+      </select>
+
+      <button id="buscar-recurso">Buscar</button>
+      <button id="baixar-arquivo">Baixar Arquivo</button> <!-- Botão para baixar o arquivo -->
+    </div>
+    
+    <div class="resultado">
+      <table id="tabela-resultado">
+        <thead>
+          <tr>
+            <th>EMPRESA</th>
+            <th>RECURSO</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <div class="descrição"></div>
+    <p>&copy; 2024 - Todos os direitos reservados</p>
+  </footer>
+
+  <script src="resultado.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.0/xlsx.full.min.js"></script> <!-- Adicionando a biblioteca xlsx -->
+</body>
+</html>

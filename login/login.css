@@ -1,0 +1,85 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #050505, #000066, #4b0082, #800080); /* Fundo degradê mais escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Formulário de Login */
+.container {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo mais escura com transparência */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+}
+
+.titulo-login{
+    color: white; /* Cor do título "Login" */
+    text-align: center; /* Centralizando o título */
+    font-size: 28px; /* Tamanho da fonte */
+    margin-bottom: 20px; /* Margem inferior */
+}
+
+.login-form form {
+    margin: 0;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(255, 255, 255); /* Cor do texto dos labels */
+}
+
+.login-form input,
+.login-form .login-btn {
+    width: calc(100% - 20px); /* Ajustando a largura para levar em conta o padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.login-form .login-btn {
+    background-color: #0077cc; /* Cor de fundo mais clara para o botão */
+    width: calc(100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    margin: 0 auto; /* Centralizando o botão */
+}
+
+.login-form .login-btn:hover {
+    background-color: #0055a3; /* Cor de fundo um pouco mais escura no hover */
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(76, 175, 80, 0.9); /* Verde com opacidade */
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+
+
+.popup-green {
+    background-color: green;
+}
+
+.popup-red {
+    background-color: red;
+}
