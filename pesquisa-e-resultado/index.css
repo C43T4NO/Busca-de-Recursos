@@ -1,0 +1,575 @@
+/* Define a fonte padrão para o corpo do documento */
+body {
+    font-family: 'Aptos', sans-serif;
+    margin: 0; /* Remove as margens padrão do corpo */
+    padding: 0; /* Remove os preenchimentos padrão do corpo */
+    /* Fundo degradê */
+    background: linear-gradient(to bottom right, #050505, #000066, #4b0082, #800080); /* Fundo degradê mais escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000000; /* Define a cor do texto como preto */
+}
+
+/* Estiliza o contêiner principal da página */
+.container {
+    max-width: 1200px; /* Define a largura máxima do contêiner para 900 pixels */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 0px; /* Adiciona preenchimento interno ao contêiner */
+}
+
+.blur {
+    filter: blur(3px);
+    pointer-events: none; /* Desabilita eventos do mouse na tabela borrada */
+}
+
+/* Pop-up */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #f85454; /* Vermelho */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+    color: white; /* Cor do texto */
+}
+
+.popup-content {
+    font-family: Arial, sans-serif; /* Fonte */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: white; /* Cor do botão fechar */
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ffffff80; /* Cor do botão fechar ao passar o mouse */
+}
+/* Estiliza os cabeçalhos h1 e h2 */
+h1 {
+    font-family: 'Aptos', sans-serif;
+    color: #ffffff;
+}
+
+/* Estilo para o título da página */
+h2.page-title {
+    font-family: 'Aptos', sans-serif;
+    color: #ffffff;
+}
+
+/* Estiliza os cabeçalhos das boxes */
+.box-title {
+    color: #000000; /* Define a cor do texto do título da box como preto */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estiliza as colunas de layout */
+.column {
+    display: inline-block; /* Permite que as colunas fiquem uma ao lado da outra */
+    vertical-align: top; /* Alinha as colunas ao topo */
+    margin-right: 25px; /* Adiciona margem direita entre as colunas */
+    width: 356px; /* Defina a largura padrão para as boxes */
+    height: 300; /* Defina a altura padrão para as boxes */
+    border: 4px solid #ffffff; /* Adiciona borda */
+    border-radius: 15px; /* Adiciona bordas arredondadas */
+    padding: 10px; /* Adiciona preenchimento interno */
+    background-color: rgb(255, 248, 248); /* Define o fundo das caixas de checklist como preto */
+}
+
+/* Define a aparência das listas de checkboxes */
+.checkbox-list {
+    margin-bottom: 25px; /* Adiciona margem inferior às listas */
+    max-height: 500px; /* Limita a altura da lista */
+    overflow-y: auto; /* Adiciona rolagem vertical quando o conteúdo excede a altura */
+}
+
+/* Estiliza os checkboxes */
+input[type="checkbox"] {
+    -webkit-appearance: none; /* Remove a aparência padrão do navegador */
+    -moz-appearance: none;
+    appearance: none;
+    /* Define o tamanho do checkbox */
+    width: 20px;
+    height: 20px;
+    /* Adiciona borda e raio de borda */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    /* Adiciona margem à direita para separar o checkbox do texto */
+    margin-right: 5px;
+    /* Habilita o cursor para interatividade */
+    cursor: pointer;
+}
+
+/* Estiliza o marcador do checkbox quando marcado */
+input[type="checkbox"]:checked {
+    background-color: #4CAF50; /* Define a cor de fundo quando marcado */
+}
+
+/* Estiliza os checkboxes */
+.checkbox-list input[type="checkbox"] {
+    vertical-align: middle; /* Alinha verticalmente os checkboxes */
+}
+
+/* Estiliza o texto do checkbox */
+.checkbox-list label {
+    display: inline-block; /* Faz com que os labels se comportem como blocos */
+    vertical-align: middle; /* Alinha verticalmente os labels */
+}
+
+/* Adiciona espaço abaixo das colunas das tabelas */
+.column {
+    margin-bottom: 40px; /* Adiciona um espaço extra abaixo das colunas */
+}
+
+/* Estiliza o botão de redirecionamento */
+#redirectButton {
+    padding: 10px 22px; /* Adiciona preenchimento interno ao botão */
+    background-color: #3289e6; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    position: absolute; /* Define o posicionamento absoluto */
+    bottom: 20px; /* Define a distância do botão em relação ao fundo da página */
+    left: 50%; /* Define a posição horizontal do botão */
+    transform: translateX(-50%); /* Move o botão para a esquerda em 50% do seu próprio tamanho */
+}
+
+/* Estilo de hover para o botão de redirecionamento */
+#redirectButton:hover {
+    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilos adicionais para o campo de busca */
+.search-container {
+    position: relative; /* Define a posição relativa para permitir posicionamento absoluto dos elementos filhos */
+    margin-bottom: 20px; /* Adiciona margem inferior ao contêiner de busca */
+}
+
+/* Estilos para o campo de busca */
+.search-input {
+    padding: 8px; /* Adiciona preenchimento interno ao campo de entrada */
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor do campo de entrada */
+    border-radius: 6px; /* Adiciona bordas arredondadas ao campo de entrada */
+    width: 560px; /* Reduz a largura do campo de busca */
+}
+
+/* Estilos para o botão de busca */
+.search-button {
+    padding: 10px 22px; /* Adiciona preenchimento interno ao botão */
+    background-color: #3289e6; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+}
+
+/* Estilos de hover para o botão de busca */
+.search-button:hover {
+    background-color: #0056b3; /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para o texto selecionado em negrito */
+.selected {
+    font-weight: bold; /* Define o texto selecionado em negrito */
+}
+
+/* Estiliza os cabeçalhos das colunas */
+.column-title {
+    font-family: 'Aptos Medium', sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #005eff, #8a2be2, #e91e63); /* Degradê de azul para rosa */
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0; /* Borda arredondada no topo */
+}
+
+/* Estilo do separador */
+.separator {
+    border-right: 2px solid #fff; /* Linha vertical separadora */
+}
+
+/* Estilo para o contêiner da tabela */
+.table-container {
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal quando necessário */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    position: relative; /* Define a posição relativa para os títulos fixos */
+    max-height: 500px; /* Altura máxima da área de rolagem */
+}
+
+/* Estilo para o cabeçalho dos títulos fixos */
+.fixed-titles {
+    font-family: 'Aptos Medium', sans-serif;
+    position: sticky; /* Fixa o cabeçalho no topo da tabela */
+    top: 0; /* Ajusta a distância do topo */
+    background-color: #ffffff; /* Fundo gradiente */
+    z-index: 2; /* Garante que os títulos fiquem acima da tabela */
+    display: flex; /* Utiliza um layout flexível */
+    justify-content: space-between; /* Espaçamento igual entre os títulos */
+    padding: 15px; /* Adiciona preenchimento interno */
+    border-radius: 3px; /* Borda arredondada */
+    border: 1px solid #ffffff; /* Adiciona bordas às células */
+}
+
+/* Estilo para os títulos fixos */
+.fixed-title {
+    padding: 15px; /* Aumenta o preenchimento interno dos títulos */
+    font-size: 18px; /* Tamanho da fonte para os títulos */
+    color: #000000; /* Cor do texto branco */
+    text-align: left; /* Centraliza o texto */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo para a tabela */
+.table {
+    width: 100%; /* Garante que a tabela ocupe toda a largura do contêiner */
+    border-collapse: collapse; /* Colapsa as bordas das células da tabela */
+}
+
+/* Estilo para as células da tabela */
+.table th,
+.table td {
+    padding: 15px; /* Adiciona preenchimento interno às células */
+    text-align: left; /* Alinha o texto à esquerda */
+    border: 1px solid #dddddd; /* Adiciona bordas às células */
+    width: 50%; /* Define a largura das células para 50% */
+}
+
+/* Estilo para as linhas da tabela com zebra striping */
+.table tbody tr:nth-child(even) td {
+    background-color: #f5f5f5; /* Cor de fundo para linhas pares */
+}
+
+.table tbody tr:nth-child(odd) td {
+    background-color: #ffffff; /* Cor de fundo para linhas ímpares */
+}
+
+/* Estilo para as células da tabela no hover */
+.table tbody tr:hover td {
+    background-color: #f0f0f0; /* Altera a cor de fundo no hover */
+}
+
+/* Estilo para o botão Voltar */
+#backButton {
+    padding: 7px 20px; /* Aumenta o tamanho do botão */
+    background-color: #337ab7; /* Cor do botão */
+    color: #ffffff; /* Cor do texto branco */
+    border: none; /* Remove a borda do botão */
+    border-radius: 7px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 16px; /* Tamanho da fonte */
+    position: absolute; /* Posiciona de forma absoluta */
+    top: 120px; /* Ajusta a distância do topo */
+    right: 500px; /* Ajusta a distância da direita */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Efeito hover */
+#backButton:hover {
+    background-color: #135688; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilo para o novo botão Incluir/Remover Empresas e/ou Recursos */
+#includeRemoveButton {
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    background-color: #ff6600; /* Cor de destaque para o botão */
+    color: #ffffff; /* Cor do texto branco */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+/* Efeito hover */
+#includeRemoveButton:hover {
+    background-color: #ff8533; /* Altera a cor de fundo ao passar o mouse */
+}
+
+.empresas-list,
+.recursos-list {
+    max-height: 200px; /* Define a altura máxima das tabelas */
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+}
+
+/* Estilo para o botão "Resultados da Busca" */
+#resultsButton {
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    background-color: #337ab7; /* Cor de fundo azul */
+    color: #ffffff; /* Cor do texto branco */
+    border: none; /* Remove a borda do botão */
+    border-radius: 5px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 18px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+}
+
+/* Estilo de hover para o botão "Resultados da Busca" */
+#resultsButton:hover {
+    background-color: #286090; /* Altera a cor de fundo ao passar o mouse */
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    padding: 1px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 20px;
+    width: 10px;
+    height: 20px;
+}
+
+.content {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilo para o pop-up de inclusão de empresa */
+#incluirEmpresaPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#incluirEmpresaPopup .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+}
+
+#incluirEmpresaPopup #popupContent {
+    margin-top: 20px;
+}
+
+#incluirEmpresaPopup #popupContent label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#incluirEmpresaPopup #popupContent input[type="text"] {
+    width: calc(100% - 10px);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#incluirEmpresaPopup #popupContent button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#incluirEmpresaPopup #popupContent button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para os rótulos dentro do pop-up de inclusão de empresa */
+#incluirEmpresaPopup #popupContent label {
+    color: #333; /* Cor do texto dos rótulos */
+    margin-bottom: 5px; /* Espaçamento inferior entre os rótulos */
+    display: block; /* Faz com que cada rótulo apareça em uma nova linha */
+}
+
+/* Estilos para os pop-ups do SweetAlert2 */
+.swal2-popup {
+    font-size: 1rem; /* Tamanho da fonte */
+    max-width: 30rem; /* Largura máxima */
+    z-index: 9999; /* Definir um valor alto para o z-index */
+}
+
+.swal2-title {
+    font-weight: bold; /* Negrito para o título */
+}
+
+.swal2-content {
+    color: #333; /* Cor do conteúdo */
+}
+
+.swal2-icon {
+    font-size: 2rem; /* Tamanho do ícone */
+}
+
+.swal2-icon svg {
+    width: 2.5rem; /* Tamanho do ícone SVG */
+    height: 2.5rem;
+}
+
+.swal2-icon img {
+    max-width: 100%; /* Largura máxima para imagens */
+    max-height: 100%;
+}
+
+.swal2-actions {
+    display: flex; /* Exibir os botões em linha */
+    justify-content: center; /* Centralizar os botões horizontalmente */
+}
+
+.swal2-actions button {
+    margin: 0 0.5rem; /* Espaçamento entre os botões */
+    padding: 0.5rem 1rem; /* Espaçamento interno dos botões */
+    font-size: 1rem; /* Tamanho da fonte dos botões */
+    cursor: pointer; /* Cursor de mão ao passar por cima */
+    border: none; /* Remover borda dos botões */
+    border-radius: 0.25rem; /* Borda arredondada */
+    background-color: #007bff; /* Cor de fundo dos botões */
+    color: #fff; /* Cor do texto dos botões */
+}
+
+.swal2-actions button:hover {
+    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+}
+
+.swal2-actions button:focus {
+    outline: none; /* Remover contorno ao focar */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Adicionar sombra ao focar */
+}
+
+.swal2-popup.swal2-toast {
+    border-radius: 0.25rem; /* Borda arredondada para toasts */
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    font-size: 1rem; /* Tamanho da fonte para toasts */
+}
+/* Estilizando o botão de exclusão para empresas e recursos */
+button.excluir-empresa,
+button.excluir-recurso {
+    background-color: #dc3545; /* Cor de fundo padrão */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remover borda */
+    border-radius: 5px; /* Adicionar cantos arredondados */
+    padding: 8px 12px; /* Espaçamento interno */
+    cursor: pointer; /* Cursor ao passar */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+/* Estilizando o botão de exclusão quando o mouse está sobre ele */
+button.excluir-empresa:hover,
+button.excluir-recurso:hover {
+    background-color: #c82333; /* Alterar cor de fundo ao passar o mouse */
+}
+
+
+/* Estilizando as tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    background-color: #fff; /* Define a cor de fundo da tabela */
+    border-radius: 10px; /* Adiciona cantos arredondados */
+}
+
+/* Estilo para as células do cabeçalho */
+th {
+    background-color: #340094; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto do cabeçalho */
+    padding: 10px; /* Espaçamento interno */
+    text-align: left; /* Alinhamento do texto */
+}
+
+/* Estilo para as células das linhas */
+td {
+    border-bottom: 1px solid #ddd; /* Linha horizontal */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Estilo para células das linhas alternadas */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo das linhas pares */
+}
+
+/* Estilizando o ícone 'x' */
+.close {
+    position: absolute; /* Define a posição como absoluta */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    font-size: 20px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor ao passar */
+    color: #fff; /* Cor do ícone */
+    width: 15px; /* Largura do quadrado */
+    height: 15px; /* Altura do quadrado */
+    border: 2px solid #ff0000; /* Borda vermelha */
+    border-radius: 4px; /* Cantos arredondados */
+    display: flex; /* Permite o uso de alinhamento */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilizando o ícone 'x' quando o mouse está sobre ele */
+.close:hover {
+    color: #ff0000; /* Altera a cor do ícone ao passar o mouse */
+}
+
+
+
+/* Importando as fontes Aptos e Aptos Medium */
+@import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;500&display=swap');

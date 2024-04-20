@@ -28,29 +28,35 @@ form.addEventListener('submit', async (event) => {
             throw new Error(errorMessage.message);
         }
 
-        // Se o login for bem-sucedido, exiba o pop-up de sucesso
-        mostrarPopup('Login efetuado com sucesso!', '#4CAF50');
-        
-        // Redirecione para a página de pesquisa após 2 segundos
+        // Parse do JSON da resposta
+        const responseData = await response.json();
+
+        // Verifica se a resposta inclui a permissao do usuário
+        if (!responseData.permissao) {
+            throw new Error('Permissão do usuário não encontrada.');
+        }
+
+        // Exibe pop-up de sucesso
+        mostrarPopup('Login efetuado com sucesso.', '#4CAF50');
+
+        // Redireciona para a página de pesquisa com base na permissão
+        const permissao = responseData.permissao;
+        const redirectURL = `../pesquisa-e-resultado/index.html?permissao=${permissao}`;
         setTimeout(() => {
-            window.location.href = '../pesquisa/index.html';
-        }, 2000);
+            window.location.href = redirectURL;
+        }, 1500); // Redireciona após 1,5 segundos
+
     } catch (error) {
-        // Se houver um erro durante o login, exiba o pop-up de erro
-        mostrarPopup(error.message || 'Ocorreu um erro durante o login.', '#FF5733');
+        // Exibe pop-up de erro para usuário ou senha incorretos
+        mostrarPopup(error.message || 'Usuário ou senha incorretos.', '#FF5733');
     }
 });
 
 function mostrarPopup(mensagem, cor) {
-    const popup = document.createElement('div');
-    popup.className = 'popup';
-    popup.textContent = mensagem;
-    popup.style.backgroundColor = cor;
-
-    document.body.appendChild(popup);
-
-    // Remover o pop-up após 2 segundos
-    setTimeout(() => {
-        popup.remove();
-    }, 2000);
+    iziToast.show({
+        message: mensagem,
+        backgroundColor: cor,
+        position: 'topRight', // Posição do pop-up na tela
+        timeout: 1500 // Tempo em milissegundos que o pop-up ficará visível
+    });
 }

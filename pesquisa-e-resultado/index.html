@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Empresas e Recursos</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Arquivo CSS do SweetAlert2 -->
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca por Empresa ou Recurso</h1>
+        
+        <!-- Campo de busca -->
+        <div class="search-container">
+            <input type="text" class="search-input" id="searchInput" placeholder="Insira o nome do recurso e/ou da empresa aqui">
+            <button class="search-button" onclick="pesquisarEResultados()">Pesquisar Recurso/Empresa</button>
+        </div>
+        
+        <div class="column">
+            <h2>Empresas</h2>
+            <div id="empresas" class="checkbox-list"></div>
+        </div>
+        <div class="column">
+            <h2>Recursos</h2>
+            <div id="recursos" class="checkbox-list"></div>
+        </div>
+        <button id="resultsButton" onclick="exibirResultados()">Resultados da Busca</button>
+        <button id="includeRemoveButton" onclick="exibirIncluirRemoverJanela()">Incluir/Remover Empresas e/ou Recursos</button>
+    </div>
+    <!-- Tabela de resultados -->
+    <div id="resultados" style="display: none;">
+        <h2 class="page-title">Resultados da Busca</h2>
+        <!-- Cabeçalho dos títulos fixos -->
+        <div class="fixed-titles">
+            <div class="fixed-title">Empresas</div>
+            <div class="fixed-title">Recursos</div>
+        </div>
+        <!-- Tabela com os resultados -->
+        <div class="table-container">
+            <table id="tabelaResultados" class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>ID</th>
+                        <th>Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dados -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Div para envolver o botão Voltar -->
+        <div class="back-button-container">
+            <button id="backButton">Voltar</button>
+        </div>
+    </div>
+
+    <!-- Pop-up de inclusão de empresa -->
+<div id="incluirEmpresaPopup" class="popup">
+    <span class="close" onclick="fecharIncluirEmpresaPopup()">&times;</span>
+    <div id="popupContent" class="popup-content">
+        <!-- Conteúdo do pop-up de inclusão de empresa -->
+        <label for="novaEmpresaIdInput">ID:</label>
+        <input type="text" id="novaEmpresaIdInput"><br>
+        <label for="novaEmpresaNomeInput">Nome:</label>
+        <input type="text" id="novaEmpresaNomeInput"><br>
+        <button id="confirmarInclusaoEmpresaButton">Confirmar Inclusão</button> <!-- Botão de confirmação -->
+    </div>
+</div>
+
+<!-- Pop-up de mensagem -->
+ <div id="popupMessage" class="popup-message" style="display: none;"></div>
+
+<!-- Janela de inclusão/remoção de empresas e recursos -->
+<div id="overlay" class="overlay" style="display: none;">
+    <div id="window" class="window">
+        <span class="close" onclick="fecharIncluirRemoverJanela()">&times;</span>
+        <div class="content">
+            <h2>Incluir/Remover Empresas e/ou Recursos</h2>
+            <!-- Botões renomeados aqui -->
+            <div class="button-container">
+                <button id="botaoIncluirEmpresa">Incluir Empresa</button>
+                <button id="botaoIncluirRecurso">Incluir Recurso</button>
+            </div>
+            <!-- Fim dos botões -->
+            <div class="column"> <!-- Adicionado uma coluna para as empresas -->
+                <h3>Empresas</h3>
+                <!-- Tabela de inclusão de empresa -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="empresasTableBody"> <!-- Adicionado o ID para a tabela de empresas -->
+                        <!-- Aqui você pode adicionar as linhas da tabela de empresas -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="column"> <!-- Adicionado uma coluna para os recursos -->
+                <h3>Recursos</h3>
+                <!-- Tabela de inclusão de recurso -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Empresa ID</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recursosTableBody"> <!-- Adicionado o ID para a tabela de recursos -->
+                        <!-- Aqui você pode adicionar as linhas da tabela de recursos -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
