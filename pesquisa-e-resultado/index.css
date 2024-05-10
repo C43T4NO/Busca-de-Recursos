@@ -281,7 +281,7 @@ input[type="checkbox"]:checked {
 }
 
 /* Estilo para o novo botão Incluir/Remover Empresas e/ou Recursos */
-#includeRemoveButton {
+#incluirRemoverButton {
     padding: 10px 20px; /* Aumenta o tamanho do botão */
     background-color: #ff6600; /* Cor de destaque para o botão */
     color: #ffffff; /* Cor do texto branco */
@@ -294,7 +294,7 @@ input[type="checkbox"]:checked {
 }
 
 /* Efeito hover */
-#includeRemoveButton:hover {
+#incluirRemoverButton:hover {
     background-color: #ff8533; /* Altera a cor de fundo ao passar o mouse */
 }
 
@@ -569,6 +569,77 @@ tr:nth-child(even) {
     color: #ff0000; /* Altera a cor do ícone ao passar o mouse */
 }
 
+
+/* Estilos para a janela de inclusão/remoção de empresas e recursos */
+.window {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para os títulos "Incluir Empresa" e "Incluir Recurso" */
+.window h3 {
+    margin-top: 0;
+}
+
+/* Estilos para os campos de entrada e rótulos */
+.input-row {
+    margin-bottom: 10px;
+}
+
+.input-row label {
+    display: inline-block;
+    width: 120px;
+}
+
+.input-row input {
+    width: 660px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para o botão de confirmar */
+#submitBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1e7e34;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: #2ecc71;
+}
+
+#downloadButton {
+    background-color: #4CAF50; /* Cor verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave */
+
+    /* Adiciona sombra ao botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de hover */
+#downloadButton:hover {
+    background-color: #45a049; /* Verde claro quando passa o mouse */
+}
 
 
 /* Importando as fontes Aptos e Aptos Medium */

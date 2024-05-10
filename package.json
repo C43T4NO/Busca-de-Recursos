@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "formik": "^2.4.6",
     "izitoast": "^1.4.0",
     "mysql": "^2.18.1",
     "sweetalert2": "^11.10.8"
