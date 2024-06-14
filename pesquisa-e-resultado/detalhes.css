@@ -1,0 +1,165 @@
+/* Define a fonte padrão para o corpo do documento */
+body {
+    font-family: 'Aptos', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #050505, #000066, #4b0082, #800080);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    color: #000000;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 16px;
+    flex-grow: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.search-container button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #555;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    height: auto;
+    width: auto;
+    top: 50%;
+    right: 150px; /* Ajusta a distância da seta em relação ao lado direito */
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #666; /* Cor mais suave para a seta */
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a rotação */
+    z-index: 1; /* Garante que a seta esteja acima do botão */
+}
+
+.open {
+    transform: translateY(-50%) rotate(180deg); /* Rotaciona a seta para cima quando o menu é aberto */
+}
+
+.options-list {
+    position: absolute;
+    top: calc(50% + 4px); /* Remove o espaçamento entre o campo e a lista */
+    left: 0;
+    width: 93%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    display: none;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(83, 42, 81, 0.1);
+    animation: fadeIn 0.3s ease;
+}
+
+.options-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options-list li:hover {
+    background-color: #f0f0f0;
+}
+
+.info-box {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: slideIn 0.3s ease;
+}
+
+.info-box p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.info-box .info-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens */
+}
+
+.info-box .info-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.info-box .info-item:last-child {
+    margin-bottom: 0; /* Remove a margem inferior do último item */
+}
+
+
+.selected p {
+    display: none;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

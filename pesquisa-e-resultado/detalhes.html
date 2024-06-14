@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Busca com Lista de Opções</title>
+    <link rel="stylesheet" href="detalhes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-LqEq5zVs28cqCVYJERrO0S9slIG75V0T8iEgIuGnmVQJeB5bTFvER9xzYdZgB8htr7FHBVbytM5kVRv4VPhZxg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" placeholder="Clique para ver as opções" id="searchInput">
+            <button onclick="clearSearch()">Limpar Busca</button>
+            <div class="dropdown">
+                <ul class="options-list" id="options"></ul>
+                <span class="dropdown-arrow">&#9660;</span> <!-- Ícone de seta -->
+            </div>
+        </div>        
+        <div class="info-box" id="infoBox">
+            <p>Selecione uma opção para ver mais informações.</p>
+            <div class="info-item" id="infoID"><strong>ID:</strong> <span></span></div>
+            <div class="info-item" id="infoNome"><strong>Nome da Empresa:</strong> <span></span></div>
+            <div class="info-item" id="infoContato"><strong>Contato:</strong> <span></span></div>
+            <div class="info-item" id="infoExpiracao"><strong>Expiração de Contrato:</strong> <span></span></div>
+            <div class="info-item" id="infoCNPJ"><strong>CNPJ:</strong> <span></span></div>
+        </div>
+    </div>
+
+    <script src="detalhes.js"></script>
+</body>
+</html>

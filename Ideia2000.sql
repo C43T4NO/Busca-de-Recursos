@@ -27,6 +27,9 @@ DROP TABLE IF EXISTS `empresas`;
 CREATE TABLE `empresas` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
+  `cnpj` varchar(20) DEFAULT NULL,
+  `expiracao_contrato` date DEFAULT NULL,
+  `contato` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -37,7 +40,7 @@ CREATE TABLE `empresas` (
 
 LOCK TABLES `empresas` WRITE;
 /*!40000 ALTER TABLE `empresas` DISABLE KEYS */;
-INSERT INTO `empresas` VALUES (1,'TechSolutions Ltda.'),(2,'InovaSoft S.A.'),(3,'DataTech Inc.'),(4,'SoftWorks Solutions'),(5,'CodeCrafters Ltd.'),(6,'ByteWave Technologies'),(7,'GlobalSoft Solutions'),(8,'SmartCode Systems'),(9,'InfoTech Innovations'),(10,'WebWizards Inc.'),(11,'InovaTec'),(12,'MegaSolutions'),(13,'TechGenius'),(14,'FutureTech'),(15,'DigitalSystems'),(16,'WebMasters'),(17,'SkylineTech'),(18,'NexGenTech'),(19,'InnovativeSolutions'),(20,'AlphaTech'),(21,'FuturTech'),(22,'TechCraft'),(23,'GlobalTech'),(24,'WebWonders'),(25,'BrightIdeas'),(26,'EagleEyeTech'),(27,'StarTech'),(28,'CyberSolutions'),(29,'TechNova'),(30,'SmartTech');
+INSERT INTO `empresas` VALUES (1,'TechSolutions Ltda.','00778679400010','2024-08-23','+55 88911141501'),(2,'InovaSoft S.A.','09641221300011','2024-08-14','+55 21976147827'),(3,'DataTech Inc.','07216980700012','2024-09-13','+55 79950043127'),(4,'SoftWorks Solutions','08511148100012','2024-12-17','+55 98992381219'),(5,'CodeCrafters Ltd.','05220305500018','2024-10-15','+55 91924954352'),(6,'ByteWave Technologies','07952539600018','2024-12-17','+55 67940939001'),(7,'GlobalSoft Solutions','07441006100017','2024-11-17','+55 67964334499'),(8,'SmartCode Systems','09629412300011','2024-12-29','+55 81919998846'),(9,'InfoTech Innovations','01157334100011','2025-05-09','+55 62969042552'),(10,'WebWizards Inc.','04261907500017','2024-05-31','+55 11969502876'),(11,'InovaTec','05796253800018','2025-01-02','+55 83980064269'),(12,'MegaSolutions','03487304300010','2024-10-01','+55 84952159574'),(13,'TechGenius','04470132900012','2025-03-25','+55 83916714353'),(14,'FutureTech','01424567600015','2024-06-26','+55 79912519321'),(15,'DigitalSystems','09320785400019','2024-11-02','+55 31985869249'),(16,'WebMasters','09086634200019','2025-01-10','+55 83980175349'),(17,'SkylineTech','03307509900016','2024-12-22','+55 92991948568'),(18,'NexGenTech','01018626900010','2024-11-18','+55 62912246434'),(19,'InnovativeSolutions','06701664500012','2024-06-21','+55 47997459734'),(20,'AlphaTech','03591046400014','2024-07-11','+55 65955167461'),(21,'FuturTech','05074736900014','2024-06-15','+55 82903164996'),(22,'TechCraft','09813120800011','2024-10-30','+55 69969068804'),(23,'GlobalTech','00964801900011','2024-07-16','+55 91901945485'),(24,'WebWonders','05836445100017','2024-08-13','+55 96968089053'),(25,'BrightIdeas','01716128200014','2024-06-09','+55 47916902365'),(26,'EagleEyeTech','02584268200015','2024-07-01','+55 79908416462'),(27,'StarTech','07415877500011','2024-06-10','+55 63946109447'),(28,'CyberSolutions','05116084100010','2024-06-20','+55 27911745090'),(29,'TechNova','07343499900014','2025-03-19','+55 69958411422'),(30,'SmartTech','04479058800018','2024-06-20','+55 63937466303');
 /*!40000 ALTER TABLE `empresas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-07 13:34:10
+-- Dump completed on 2024-06-04 21:30:12

@@ -641,6 +641,23 @@ tr:nth-child(even) {
     background-color: #45a049; /* Verde claro quando passa o mouse */
 }
 
+#detalhesButton {
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    background-color: #ff6600; /* Cor de fundo laranja */
+    color: #ffffff; /* Cor do texto branco */
+    border: none; /* Remove a borda do botão */
+    border-radius: 8px; /* Borda arredondada */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    font-size: 18px; /* Tamanho da fonte */
+    transition: background-color 0.3s; /* Adiciona uma transição suave */
+}
+
+/* Efeito hover */
+#detalhesButton:hover {
+    background-color: #ff8533; /* Altera a cor de fundo ao passar o mouse */
+}
+
 
 /* Importando as fontes Aptos e Aptos Medium */
 @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;500&display=swap');
+
