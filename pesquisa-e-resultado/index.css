@@ -263,7 +263,7 @@ input[type="checkbox"]:checked {
 /* Estilo para o botão Voltar */
 #backButton {
     padding: 7px 20px; /* Aumenta o tamanho do botão */
-    background-color: #337ab7; /* Cor do botão */
+    background-color: #cf2626; /* Cor do botão */
     color: #ffffff; /* Cor do texto branco */
     border: none; /* Remove a borda do botão */
     border-radius: 7px; /* Borda arredondada */
@@ -277,7 +277,7 @@ input[type="checkbox"]:checked {
 
 /* Efeito hover */
 #backButton:hover {
-    background-color: #135688; /* Altera a cor de fundo ao passar o mouse */
+    background-color: #ff0000; /* Altera a cor de fundo ao passar o mouse */
 }
 
 /* Estilo para o novo botão Incluir/Remover Empresas e/ou Recursos */
@@ -657,6 +657,30 @@ tr:nth-child(even) {
     background-color: #ff8533; /* Altera a cor de fundo ao passar o mouse */
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#logoutButton {
+    background-color: #ca2f24; /* Vermelho */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#logoutButton:hover {
+    background-color: #ff0000;
+}
 
 /* Importando as fontes Aptos e Aptos Medium */
 @import url('https://fonts.googleapis.com/css2?family=Aptos:wght@400;500&display=swap');

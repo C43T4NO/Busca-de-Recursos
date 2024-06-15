@@ -10,7 +10,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Busca por Empresa ou Recurso</h1>
+        <div class="header">
+            <h1>Busca por Empresa ou Recurso</h1>
+            <button id="logoutButton" onclick="window.location.href='../login/login.html'">Sair</button>
+        </div>
         <!-- Campo de busca -->
         <div class="search-container">
             <input type="text" class="search-input" id="searchInput" placeholder="Insira o nome do recurso e/ou da empresa aqui">
@@ -28,7 +31,7 @@
         <button id="resultsButton">Resultados da Busca</button>
         <button id="incluirRemoverButton" onclick="exibirIncluirRemoverJanela()">Incluir/Remover Empresas e/ou Recursos</button>
             <!-- Novo botão para redirecionar para detalhes.html -->
-    <button id="detalhesButton" onclick="window.location.href='detalhes.html'">Ver Detalhes das Empresas</button>
+        <button id="detalhesButton" onclick="window.location.href='detalhes.html'">Ver Detalhes das Empresas</button>
     </div>
 
     
